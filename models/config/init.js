@@ -10,10 +10,8 @@ import { autodDeleteBookingRecords } from "../bookingsModel.js"
 const { Pool } = pg
 
 const pool = new Pool({
-  user: "postgres",
-  host: "localhost",
-  database: "signoff",
-  port: 5432
+ connectionString:'postgres://signoff:ntw5gLiqsLwj39WreyJ2lQ5OENIhNQqC@dpg-cg7ea5d269v5l617am7g-a.oregon-postgres.render.com/signoff',
+ ssl:{rejectUnauthorized:false}
 })
 
 async function initDB() {
@@ -23,6 +21,7 @@ async function initDB() {
   await pool.query(createBookings)
   await pool.query(createImages)
   autodDeleteBookingRecords()
+  console.log('db initiated')
 }
 
 export { initDB, pool }
