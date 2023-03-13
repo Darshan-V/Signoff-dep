@@ -15,12 +15,16 @@ const pool = new Pool({
 })
 
 async function initDB() {
+  // await pool.query('drop table property cascade')
+  // await pool.query('drop table images cascade')
+  // await pool.query('drop table bookings cascade')
+
   await pool.query(createPlaces)
   await pool.query(createUsers)
   await pool.query(createSessions)
   await pool.query(createBookings)
   await pool.query(createImages)
-  autodDeleteBookingRecords()
+  // autodDeleteBookingRecords()
   console.log('db initiated')
 }
 
