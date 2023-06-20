@@ -10,7 +10,7 @@ import { autodDeleteBookingRecords } from "../bookingsModel.js"
 const { Pool } = pg
 
 const pool = new Pool({
- connectionString:'postgres://signoff:ntw5gLiqsLwj39WreyJ2lQ5OENIhNQqC@dpg-cg7ea5d269v5l617am7g-a.oregon-postgres.render.com/signoff',
+ connectionString:'postgres://signoff:CbKmUAjKWGzyHRknrLBqq1ODMek1qoUS@dpg-ci8m0398g3n3vm5o7j6g-a.oregon-postgres.render.com/signoff_su01',
  ssl:{rejectUnauthorized:false}
 })
 
